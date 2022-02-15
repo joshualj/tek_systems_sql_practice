@@ -21,6 +21,8 @@ select productName as `Name`, productLine as `Product Line`, productScale as `Sc
 where productLine = "Classic Cars" or productLine = "Vintage Cars"
 order by productName;
 
+-- can reject numbers
+
 
 
 
