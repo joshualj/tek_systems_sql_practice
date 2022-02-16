@@ -10,7 +10,7 @@ WHERE FIRST_NAME = "Marion";
 SELECT * FROM users 
 WHERE users.USER_ID NOT IN (SELECT DISTINCT user_id from orders);
 
--- Question 3     -- Concerned this code doesn't ensure items show in separate orders
+-- Question 3     -- Concerned this code doesn't ensure items are from separate orders (It might fail an edge case test where an item is ordered multiple times in one order, but not in any others)
 SELECT i.NAME, i.PRICE
 FROM items as i
 JOIN order_items as ot on ot.ITEM_ID = i.ITEM_ID
